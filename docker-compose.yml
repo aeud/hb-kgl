@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+
+  jupyter:
+    image: jupyter/datascience-notebook
+    working_dir: /home/jupyter
+    volumes:
+      - ./jupyter:/home/jupyter
+      - ./data:/home/jupyter/data
+    ports:
+      - "8888:8888"
